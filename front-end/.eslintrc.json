@@ -1,13 +1,5 @@
 {
-  "extends": "eslint:recommended",
-  "parser": "vue-eslint-parser",
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaVersion": 2020,
-    "ecmaFeatures": {
-      "globalReturn": false,
-      "impliedStrict": true,
-      "jsx": false
-    }
-  }
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"]
 }

@@ -10,6 +10,9 @@ export const useUserStore = defineStore('user', {
     state: (): UserState => ({
         user: null,
     }),
+    getters: {
+        isLoggedIn: (state): boolean => !!state.user,
+    },
     actions: {
         async signUp(username: string, email: string, password: string): Promise<void> {
             const response = await register(username, email, password);
