@@ -39,7 +39,7 @@ const login = () => {
     errorMessage.value = '';
 
     userStore
-        .signIn(email.value, password.value)
+        .login(email.value, password.value)
         .then(() => {
             console.log('Connexion réussie');
             const redirectUrl = routeStore.redirectUrl;

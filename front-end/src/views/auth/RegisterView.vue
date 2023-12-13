@@ -50,7 +50,7 @@ const register = () => {
     errorMessage.value = '';
 
     userStore
-        .signUp(username.value, email.value, password.value)
+        .register(username.value, email.value, password.value)
         .then(() => {
             console.log('Inscription réussie');
             router.push('/learning/dashboard');

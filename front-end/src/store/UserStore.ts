@@ -14,13 +14,16 @@ export const useUserStore = defineStore('user', {
         isLoggedIn: (state): boolean => !!state.user,
     },
     actions: {
-        async signUp(username: string, email: string, password: string): Promise<void> {
+        async register(username: string, email: string, password: string): Promise<void> {
             const response = await register(username, email, password);
             this.user = response.user;
         },
-        async signIn(email: string, password: string): Promise<void> {
+        async login(email: string, password: string): Promise<void> {
             const response = await login(email, password);
             this.user = response.user;
+        },
+        logout(): void {
+            this.user = null;
         },
     },
 });
